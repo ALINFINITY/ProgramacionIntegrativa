@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Grupo3_Identity.props" />
+</Project>

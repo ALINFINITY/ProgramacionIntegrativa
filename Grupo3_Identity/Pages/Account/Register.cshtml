@@ -1,0 +1,58 @@
+﻿@page
+@model Grupo3_Identity.Pages.Account.RegisterModel
+@using Grupo3_Identity.Pages.Account
+@{
+}
+
+<h2 class="textolime">Registrarse</h2>
+<hr />
+<div class="contenedorRegistro">
+	<form class="regiform" asp-route-retunUrl="@Model.ReturnURL" method="post">
+		<div>
+			<br />
+			<label>Nombre</label>
+			<br />
+			<input asp-for="Register.Nombre" required type="text" placeholder="Tu nombre"/>
+		</div>
+		<div>
+			<br />
+			<label>Apellido</label>
+			<br />
+			<input asp-for="Register.Apellido" required type="text" placeholder="Tu apellido"/>
+		</div>
+		<div>
+			<br />
+			<label>Email</label>
+			<br />
+			<input asp-for="Register.Email" required type="email" placeholder="Tu correo"/>
+		</div>
+		<div>
+			<br />
+			<label>Telefono</label>
+			<br />
+			<input asp-for="Register.Telefono" required type="text" placeholder="Tu telefono"/>
+		</div>
+		<div>
+			<br />
+			<label>Direccion</label>
+			<br />
+			<input asp-for="Register.Direccion" required type="text" placeholder="Tu dirección"/>
+		</div>
+		<div>
+			<br />
+			<label>Contraseña</label>
+			<br />
+			<input asp-for="Register.Password" required type="password" placeholder="Contraseña"/>
+		</div>
+		<div>
+			<br />
+			<label>Confirmar contraseña</label>
+			<br />
+			<input asp-for="Register.ConfirmarP" required type="password" placeholder="Repite contraseña"/>
+		</div>
+		<br />
+		<button type="submit">Registrarse</button>
+
+	</form>
+</div>
+

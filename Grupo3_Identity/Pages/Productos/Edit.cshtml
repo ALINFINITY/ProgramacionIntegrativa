@@ -1,0 +1,59 @@
+﻿@page
+@model Grupo3_Identity.Pages.Productos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="textolime">Editar Producto</h1>
+<hr />
+<div class="row crearcontainer">
+    <div class="col-md-4">
+        <form class="formcrear" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Producto.Id" />
+            <div class="form-group">
+                <label asp-for="Producto.Nombre" class="control-label"></label>
+                <input asp-for="Producto.Nombre" class="form-control" />
+                <span asp-validation-for="Producto.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Producto.Precio" class="control-label"></label>
+                <input asp-for="Producto.Precio" class="form-control" />
+                <span asp-validation-for="Producto.Precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Producto.Tipo" class="control-label"></label>
+                <input asp-for="Producto.Tipo" class="form-control" />
+                <span asp-validation-for="Producto.Tipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Producto.Color" class="control-label"></label>
+                <input asp-for="Producto.Color" class="form-control" />
+                <span asp-validation-for="Producto.Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Producto.Origen" class="control-label"></label>
+                <input asp-for="Producto.Origen" class="form-control" />
+                <span asp-validation-for="Producto.Origen" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Producto.Disponible" /> @Html.DisplayNameFor(model => model.Producto.Disponible)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            <a class="asindeco" asp-page="./Index">Regresar a la lista</a>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

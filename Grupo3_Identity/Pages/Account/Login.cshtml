@@ -1,0 +1,29 @@
+﻿@page
+@model Grupo3_Identity.Pages.Account.LoginModel
+@{
+}
+
+<body>
+	<div class="iscontent">
+		<div class="contenedorInicio">
+			<h2>Inicio de sesión</h2>
+			<form method="post">
+				<div class="email">
+					<br />
+					<label>Email</label>
+					<br />
+					<input asp-for="Login.Email" type="email" placeholder="Ingresa tu email" />
+				</div>
+				<div class="pass">
+					<br />
+					<label>Contraseña</label>
+					<br />
+					<input asp-for="Login.Password" type="password" placeholder="Ingresa tu contraseña" />
+				</div>
+				<br />
+				<button type="submit">Ingresar</button>
+			</form>
+
+		</div>
+	</div>
+</body>
